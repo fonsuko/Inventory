@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Simple Tables</title>
+  <title>Inventory Management System</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
@@ -18,6 +18,17 @@
        folder instead of downloading all of them to reduce the load. -->
   <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
 
+  <!-- Morris chart -->
+  <link rel="stylesheet" href="bower_components/morris.js/morris.css">
+  <!-- jvectormap -->
+  <link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css">
+  <!-- Date Picker -->
+  <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker.css">
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -27,26 +38,23 @@
 
   <!-- Google Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
-</head>
-<body class="hold-transition skin-blue sidebar-mini">
-<div class="wrapper">
+  </head>
+  <body class="hold-transition skin-blue sidebar-mini">
+  <div class="wrapper">
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="../../index2.html" class="logo">
+    <a href="index2.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
+      <span class="logo-mini"><b>I</b>MS</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>LTE</span>
+      <span class="logo-lg"><b>IMS</b> SERVICE</span>
     </a>
     <!-- Header Navbar: style can be found in header.less -->
     <nav class="navbar navbar-static-top">
       <!-- Sidebar toggle button-->
       <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
         <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
       </a>
 
       <div class="navbar-custom-menu">
@@ -55,21 +63,25 @@
           <li class="dropdown messages-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-envelope-o"></i>
-              <span class="label label-success">4</span>
+
+              <!-- Notifications Head Contents -->
+
+    <!--          <span class="label label-success">4</span> -->
             </a>
+
             <ul class="dropdown-menu">
-              <li class="header">You have 4 messages</li>
+    <!--          <li class="header">You have 4 messages</li> -->
               <li>
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu">
                   <li><!-- start message -->
                     <a href="#">
                       <div class="pull-left">
-                        <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                        <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         Support Team
-                        <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                   <small><i class="fa fa-clock-o"></i> 5 mins</small>
                       </h4>
                       <p>Why not buy a new awesome theme?</p>
                     </a>
@@ -78,7 +90,7 @@
                   <li>
                     <a href="#">
                       <div class="pull-left">
-                        <img src="../../dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                        <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
                       </div>
                       <h4>
                         AdminLTE Design Team
@@ -88,7 +100,6 @@
                     </a>
                   </li>
                   <li>
-                    <a href="#">
                       <div class="pull-left">
                         <img src="../../dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
                       </div>
@@ -96,6 +107,7 @@
                         Developers
                         <small><i class="fa fa-clock-o"></i> Today</small>
                       </h4>
+
                       <p>Why not buy a new awesome theme?</p>
                     </a>
                   </li>
@@ -129,19 +141,24 @@
             </ul>
           </li>
           <!-- Notifications: style can be found in dropdown.less -->
+
+
           <li class="dropdown notifications-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-bell-o"></i>
-              <span class="label label-warning">10</span>
+<!--              <span class="label label-warning">10</span> -->
             </a>
             <ul class="dropdown-menu">
-              <li class="header">You have 10 notifications</li>
+
+              <!-- Notifications Content -->
+<!--            <li class="header">You have 10 notifications</li> -->
               <li>
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu">
                   <li>
                     <a href="#">
-                      <i class="fa fa-users text-aqua"></i> 5 new members joined today
+
+<!--                      <i class="fa fa-users text-aqua"></i> 5 new members joined today -->
                     </a>
                   </li>
                   <li>
@@ -174,10 +191,12 @@
           <li class="dropdown tasks-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <i class="fa fa-flag-o"></i>
-              <span class="label label-danger">9</span>
+
+              <!-- Notifications Content -->
+    <!--          <span class="label label-danger">9</span> -->
             </a>
             <ul class="dropdown-menu">
-              <li class="header">You have 9 tasks</li>
+    <!--          <li class="header">You have 9 tasks</li> -->
               <li>
                 <!-- inner menu: contains the actual data -->
                 <ul class="menu">
@@ -187,8 +206,9 @@
                         Design some buttons
                         <small class="pull-right">20%</small>
                       </h3>
-                      <div class="progress progress-xs">
-                        <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress xs">
+                        <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar"
+                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                           <span class="sr-only">20% Complete</span>
                         </div>
                       </div>
@@ -201,8 +221,9 @@
                         Create a nice theme
                         <small class="pull-right">40%</small>
                       </h3>
-                      <div class="progress progress-xs">
-                        <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress xs">
+                        <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar"
+                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                           <span class="sr-only">40% Complete</span>
                         </div>
                       </div>
@@ -215,8 +236,9 @@
                         Some task I need to do
                         <small class="pull-right">60%</small>
                       </h3>
-                      <div class="progress progress-xs">
-                        <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress xs">
+                        <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar"
+                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                           <span class="sr-only">60% Complete</span>
                         </div>
                       </div>
@@ -229,8 +251,9 @@
                         Make beautiful transitions
                         <small class="pull-right">80%</small>
                       </h3>
-                      <div class="progress progress-xs">
-                        <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress xs">
+                        <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar"
+                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                           <span class="sr-only">80% Complete</span>
                         </div>
                       </div>
@@ -247,13 +270,13 @@
           <!-- User Account: style can be found in dropdown.less -->
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              <img src="../../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
               <span class="hidden-xs">Alexander Pierce</span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->
               <li class="user-header">
-                <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
                   Alexander Pierce - Web Developer
@@ -301,18 +324,38 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
+
+
+<!-- **** This have to update the name of person who logged in to the system -->
+
         <div class="pull-left info">
-          <p>Alexander Pierce</p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+
+          <!-- ** Attract person info from Database -->
+          <p><?php echo $_SESSION['memname']; ?></p>
+
+          <!-- **Check the role of user after logged in -->
+          <?php if($_SESSION['memrole'] == 1) { ?>
+            <a href="#"><i class="fa fa-circle text-success"></i> Online : Admin</a>
+          <?php } ?>
+          <?php if($_SESSION['memrole'] == 2) { ?>
+            <a href="#"><i class="fa fa-circle text-success"></i> Online : Manager</a>
+          <?php } ?>
+          <?php if($_SESSION['memtier'] == 3) { ?>
+            <a href="#"><i class="fa fa-circle text-success"></i> Online : Seller</a>
+
+          <?php } ?>
+        <?php
+
+        ?>
         </div>
       </div>
       <!-- search form -->
       <form action="#" method="get" class="sidebar-form">
         <div class="input-group">
           <input type="text" name="q" class="form-control" placeholder="Search...">
-              <span class="input-group-btn">
+          <span class="input-group-btn">
                 <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
                 </button>
               </span>
@@ -322,18 +365,77 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
-        <li class="treeview">
+        <li class="active treeview">
           <a href="#">
-            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+            <i class="fa fa-archive"></i> <span>Inventory Stock</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="../../index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
-            <li><a href="../../index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+            <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
+            <li><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
           </ul>
         </li>
+
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-edit"></i> <span>Add Product</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/forms/add_new.php"><i class="fa fa-circle-o"></i> Add New Product <small class="label pull-right bg-red">new</small></a></li>
+            <li><a href="pages/forms/add_more.php"><i class="fa fa-circle-o"></i> Add More Product <small class="label pull-right bg-green">more</small></a></li>
+            <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Manage Product Details </a></li>
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-tasks"></i> <span>Product Status</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> View Product Status </a></li>
+            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Manage Product Status </a></li>
+
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-newspaper-o"></i> <span>Order List</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/tables/order_list.php"><i class="fa fa-circle-o"></i> Order List details </a></li>
+            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Manage Order List</a></li>
+
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-truck"></i> <span>Stock History</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Shipment History </a></li>
+            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Order List History </a></li>
+            <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Manage History</a></li>
+          </ul>
+        </li>
+
+
+
         <li class="treeview">
           <a href="#">
             <i class="fa fa-files-o"></i>
@@ -505,8 +607,8 @@
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Tables</a></li>
-        <li class="active">Simple</li>
+        <li><a href="#">Order List</a></li>
+        <li class="active">Order List Details</li>
       </ol>
     </section>
 
@@ -514,7 +616,7 @@
 
     <section class="content">
       <div class="row">
-        
+
         <!-- ** Extend the tables wides -->
         <div class="col-xs-12">
           <div class="box">
@@ -539,55 +641,65 @@
               <table class="table table-bordered">
                 <tr>
                   <th style="width: 10px">#</th>
-                  <th style="width: 100px">Order List Number</th>
-                  <th>Purchase Order Number</th>
-                  <th>Customer Number</th>
+                  <th style="width: 150px">Order List Number</th>
+                  <th style="width: 180px">Purchase Order Number</th>
+                  <th style="width: 150px">Customer Number</th>
                   <th style="width: 40px">Order Status</th>
                 </tr>
                 <tr>
                   <td>1.</td>
-                  <td>Update software</td>
-                  <td>
-                    <div class="progress progress-xs">
-                      <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
-                    </div>
+                  <td><button type="button" class="btn btn-block btn-default btn-xs">OL-4114</button></td>
+
+                  <!-- Purchase Order Number -->
+                  <td> PO-652345 </td>
+                      <div class="progress-bar progress-bar-primary" style="width: 30%"></div>
+                      </div>
                   </td>
-                  <td><span class="badge bg-yellow">  </span></td>
-                  <td><span class="badge bg-red">55%</span></td>
+
+                  <td>4321231</td>
+                  <td><span class="label label-success">Paid</span></td>
                 </tr>
+
                 <tr>
                   <td>2.</td>
-                  <td>Clean database</td>
-                  <td>
-                    <div class="progress progress-xs">
-                      <div class="progress-bar progress-bar-yellow" style="width: 70%"></div>
-                    </div>
+                  <td><button type="button" class="btn btn-block btn-default btn-xs">OL-4115</button></td>
+
+                  <!-- Purchase Order Number -->
+                  <td> PO-652346 </td>
+                      <div class="progress-bar progress-bar-primary" style="width: 30%"></div>
+                      </div>
                   </td>
-                  <td><span class="badge bg-yellow">1276534</span></td>
-                  <td><span class="badge bg-green">Paid</span></td>
+
+                  <td>1276534</td>
+                  <td><span class="label label-success">Paid</span></td>
                 </tr>
 
                 <tr>
                   <td>3.</td>
-                  <td>Cron job running</td>
-                  <td>
-                    <div class="progress progress-xs progress-striped active">
+                  <td><button type="button" class="btn btn-block btn-default btn-xs">OL-4116</button></td>
+
+                  <!-- Purchase Order Number -->
+                  <td> PO-652347 </td>
                       <div class="progress-bar progress-bar-primary" style="width: 30%"></div>
-                    </div>
+                      </div>
                   </td>
-                  <td><span class="badge bg-yellow">0000019</span></td>
-                  <td><span class="badge bg-red">Waiting</span></td>
+
+                  <td>0000019</td>
+                  <td><span class="label label-warning">Waiting</span></td>
                 </tr>
+
                 <tr>
                   <td>4.</td>
-                  <td>Fix and squish bugs</td>
-                  <td>
-                    <div class="progress progress-xs progress-striped active">
-                      <div class="progress-bar progress-bar-success" style="width: 90%"></div>
-                    </div>
+                  <td><button type="button" class="btn btn-block btn-default btn-xs">OL-4117</button></td>
+
+                  <!-- Purchase Order Number -->
+                  <td> PO-652348 </td>
+                      <div class="progress-bar progress-bar-primary" style="width: 30%"></div>
+                      </div>
                   </td>
-                  <td><span class="badge bg-yellow">0000012</span></td>
-                  <td><span class="badge bg-green">Paid</span></td>
+
+                  <td>0000012</td>
+                  <td><span class="label label-danger">Cancled</span></td>
                 </tr>
               </table>
             </div>
@@ -603,18 +715,8 @@
             </div>
           </div>
           <!-- /.box -->
-
-
-
-
-
           <div class="box">
-
-
-
             <!-- /.box-header -->
-
-
                 </tr>
               </table>
             </div>
@@ -627,74 +729,22 @@
       <!-- /.row -->
       <div class="row">
         <div class="col-xs-12">
-          <div class="box">
-            <div class="box-header">
-              <h3 class="box-title">Responsive Hover Table</h3>
 
-              <div class="box-tools">
-                <div class="input-group input-group-sm" style="width: 150px;">
-                  <input type="text" name="table_search" class="form-control pull-right" placeholder="Search">
 
-                  <div class="input-group-btn">
-                    <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body table-responsive no-padding">
-              <table class="table table-hover">
-                <tr>
-                  <th>ID</th>
-                  <th>User</th>
-                  <th>Date</th>
-                  <th>Status</th>
-                  <th>Reason</th>
-                </tr>
-                <tr>
-                  <td>183</td>
-                  <td>John Doe</td>
-                  <td>11-7-2014</td>
-                  <td><span class="label label-success">Approved</span></td>
-                  <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                </tr>
-                <tr>
-                  <td>219</td>
-                  <td>Alexander Pierce</td>
-                  <td>11-7-2014</td>
-                  <td><span class="label label-warning">Pending</span></td>
-                  <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                </tr>
-                <tr>
-                  <td>657</td>
-                  <td>Bob Doe</td>
-                  <td>11-7-2014</td>
-                  <td><span class="label label-primary">Approved</span></td>
-                  <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                </tr>
-                <tr>
-                  <td>175</td>
-                  <td>Mike Doe</td>
-                  <td>11-7-2014</td>
-                  <td><span class="label label-danger">Denied</span></td>
-                  <td>Bacon ipsum dolor sit amet salami venison chicken flank fatback doner.</td>
-                </tr>
-              </table>
-            </div>
-            <!-- /.box-body -->
-          </div>
           <!-- /.box -->
         </div>
       </div>
     </section>
     <!-- /.content -->
   </div>
+
+
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.4.0
     </div>
-    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
+    <strong>Copyright &copy; 2017-2018 <a href="https://github.com/fonsuko">Fonsuko Studio</a>.</strong> All rights
     reserved.
   </footer>
 
