@@ -601,13 +601,13 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Add New Product to Inventory
-        <small class="label bg-red"> new </small>
+        Add More Product to Inventory
+        <small class="label bg-green"> more </small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li><a href="#">Add Product</a></li>
-        <li class="active">Add New Product</li>
+        <li class="active">Add More Product</li>
       </ol>
     </section>
 
@@ -619,7 +619,7 @@
           <!-- general form elements -->
           <div class="box box-primary">
             <div class="box-header with-border">
-              <h3 class="box-title">New Product Details </h3>
+              <h3 class="box-title">Product Details Added </h3>
             </div>
             <!-- /.box-header -->
             <!-- form start -->
@@ -646,7 +646,11 @@
                   <label><b>Product ID :</b></label>
                   <input type="text" class="form-control" placeholder="ex. PC000001, PC000002">
 
-                  <label><b>Product Quantity :</b></label>
+                  <label><b>Current Quantity :</b></label>
+                  <!-- this function must show the current quantity related to the database of product -->
+                  <input type="text" class="form-control" placeholder="ex. 100, 200">
+
+                  <label><b>Add More Quantity :</b></label>
                   <input type="text" class="form-control" placeholder="ex. 100, 200">
 
                   <label><b>Sale Price Per Piece :</b></label>
@@ -687,9 +691,8 @@
 
                 <div class="form-group">
                   <label for="exampleInputFile">Image Reference :</label>
-                  <input type="file" id="exampleInputFile">
 
-                  <p class="help-block">Image size should not be more than 2 KB </p>
+                
                 </div>
               </div>
               <!-- /.box-body -->
