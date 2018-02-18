@@ -415,7 +415,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Order List details </a></li>
+            <li><a href="pages/tables/order_list.php"><i class="fa fa-circle-o"></i> Order List details </a></li>
             <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Manage Order List</a></li>
 
           </ul>
