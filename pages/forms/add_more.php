@@ -388,7 +388,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="pages/forms/add_new.php"><i class="fa fa-circle-o"></i> Add New Product <small class="label pull-right bg-red">new</small></a></li>
-            <li><a href="pages/forms/add_more.php"><i class="fa fa-circle-o"></i> Add More Productn <small class="label pull-right bg-green">more</small></a></li>
+            <li><a href="pages/forms/add_more.php"><i class="fa fa-circle-o"></i> Add More Product <small class="label pull-right bg-green">more</small></a></li>
             <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Manage Product Detail </a></li>
           </ul>
         </li>
@@ -692,7 +692,7 @@
                 <div class="form-group">
                   <label for="exampleInputFile">Image Reference :</label>
 
-                
+
                 </div>
               </div>
               <!-- /.box-body -->
