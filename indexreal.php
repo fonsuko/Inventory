@@ -334,13 +334,13 @@
           <p><?php echo $_SESSION['memname']; ?></p>
 
           <!-- **Check the role of user after logged in -->
-          <?php if($_SESSION['memrole'] == 1) { ?>
+          <?php if($_SESSION['ชื่อ database ที่ระบุ id ของ dataไว้ ex.memrole'] == 1) { ?>
             <a href="#"><i class="fa fa-circle text-success"></i> Online : Admin</a>
           <?php } ?>
-          <?php if($_SESSION['memrole'] == 2) { ?>
+          <?php if($_SESSION['ชื่อ database ที่ระบุ id ของ dataไว้ memrole'] == 2) { ?>
             <a href="#"><i class="fa fa-circle text-success"></i> Online : Manager</a>
           <?php } ?>
-          <?php if($_SESSION['memtier'] == 3) { ?>
+          <?php if($_SESSION['ชื่อ database ที่ระบุ id ของ dataไว้ memtier'] == 3) { ?>
             <a href="#"><i class="fa fa-circle text-success"></i> Online : Seller</a>
 
           <?php } ?>
