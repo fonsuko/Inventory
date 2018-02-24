@@ -602,7 +602,7 @@
               <!-- Second Header Point for Select Customer-->
               <section class="content-header">
                 <h1>
-                  Selected Customer
+                  Select Customer
                   <small> Choose your register customer </small>
                 </h1>
               </section>
@@ -652,13 +652,14 @@
                           <option>option 5</option>
                         </select>
                 </div>
-            <div>
+
 
               <!-- /.box-body -->
 
-              <div class="box-footer">
-                <button type="submit" class="btn btn-primary">Submit</button>
+              <div>
+                <button type="submit" class="btn btn-primary">Create Purchase Order</button>
               </div>
+
             </form>
           </div>
           <!-- /.box -->
