@@ -380,57 +380,69 @@
 
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-edit"></i> <span>Add Product</span>
+            <i class="fa fa-edit"></i> <span>Customer</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/forms/add_new.php"><i class="fa fa-circle-o"></i> Add New Product <small class="label pull-right bg-red">new</small></a></li>
-            <li><a href="pages/forms/add_more.php"><i class="fa fa-circle-o"></i> Add More Product <small class="label pull-right bg-green">more</small></a></li>
-            <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Manage Product Details </a></li>
+            <li><a href="pages/tables/customer_list.php"><i class="fa fa-circle-o"></i> Customer List </a></li>
+            <li><a href="pages/forms/add_more.php"><i class="fa fa-circle-o"></i> Create Customer Profile </a></li>
+            <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Edit Customer Profile </a></li>
           </ul>
         </li>
 
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-tasks"></i> <span>Product Status</span>
+              <i class="fa fa-file-text-o"></i> <span>Create PO</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> View Product Status </a></li>
-            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Manage Product Status </a></li>
-
-          </ul>
-        </li>
-
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-newspaper-o"></i> <span>Order List</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="pages/tables/order_list.php"><i class="fa fa-circle-o"></i> Order List details </a></li>
-            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Manage Order List</a></li>
+            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Create PO </a></li>
+            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Customer Order </a></li>
 
           </ul>
         </li>
 
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-truck"></i> <span>Stock History</span>
+            <i class="fa fa-tasks"></i><span> Order List </span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Shipment History </a></li>
-            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Order List History </a></li>
-            <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Manage History</a></li>
+            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Order Detail</a></li>
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-newspaper-o"></i> <span> Payment Status</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/tables/order_list.php"><i class="fa fa-circle-o"></i> Payment List </a></li>
+            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Edit Payment </a></li>
+
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-truck"></i> <span>Shipment Process</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Shipment Process </a></li>
+            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Shipment via Map </a></li>
+
           </ul>
         </li>
 
