@@ -358,7 +358,7 @@
           </ul>
         </li>
 
-        <li class="active treeview">
+        <li class="treeview">
           <a href="#">
             <i class="fa fa-edit"></i> <span>Customer</span>
             <span class="pull-right-container">
@@ -366,22 +366,23 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="customer_list.php"><i class="fa fa-circle-o"></i> Customer List </a></li>
+            <li><a href="customer_list.php"><i class="fa fa-circle-o"></i> Customer List </a></li>
             <li><a href="pages/forms/add_more.php"><i class="fa fa-circle-o"></i> Create Customer Profile </a></li>
             <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Edit Customer Profile </a></li>
           </ul>
         </li>
 
-        <li class="treeview">
+        <li class=" active treeview">
           <a href="#">
-              <i class="fa fa-file-text-o"></i> <span>Create PO</span>
+              <i class="fa fa-file-text-o"></i> <span>Purchase Order</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Create PO </a></li>
+            <li class="active"><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Create PO </a></li>
             <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Customer Order </a></li>
+            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> PO History </a></li>
 
           </ul>
         </li>
@@ -440,13 +441,13 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Customer List
+        Create Purchase Order
         <small> View </small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Customer</a></li>
-        <li class="active">Customer List</li>
+        <li><a href="#">Create PO</a></li>
+        <li class="active">Create PO</li>
       </ol>
     </section>
 
@@ -459,7 +460,7 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header with-border">
-              <h3 class="box-title">Customer List Information</h3>
+              <h3 class="box-title">Add </h3>
 
               <!-- Search for Order list Number -->
 
