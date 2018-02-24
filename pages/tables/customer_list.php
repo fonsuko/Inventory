@@ -360,57 +360,69 @@
 
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-edit"></i> <span>Add Product</span>
+            <i class="fa fa-edit"></i> <span>Customer</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/forms/add_new.php"><i class="fa fa-circle-o"></i> Add New Product <small class="label pull-right bg-red">new</small></a></li>
-            <li><a href="pages/forms/add_more.php"><i class="fa fa-circle-o"></i> Add More Product <small class="label pull-right bg-green">more</small></a></li>
-            <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Manage Product Details </a></li>
+            <li><a href="pages/tables/customer_list.php"><i class="fa fa-circle-o"></i> Customer List </a></li>
+            <li><a href="pages/forms/add_more.php"><i class="fa fa-circle-o"></i> Create Customer Profile </a></li>
+            <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Edit Customer Profile </a></li>
           </ul>
         </li>
 
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-tasks"></i> <span>Product Status</span>
+              <i class="fa fa-file-text-o"></i> <span>Create PO</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> View Product Status </a></li>
-            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Manage Product Status </a></li>
-
-          </ul>
-        </li>
-
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-newspaper-o"></i> <span>Order List</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="pages/tables/order_list.php"><i class="fa fa-circle-o"></i> Order List details </a></li>
-            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Manage Order List</a></li>
+            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Create PO </a></li>
+            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Customer Order </a></li>
 
           </ul>
         </li>
 
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-truck"></i> <span>Stock History</span>
+            <i class="fa fa-tasks"></i><span> Order List </span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Shipment History </a></li>
-            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Order List History </a></li>
-            <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Manage History</a></li>
+            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Order Detail</a></li>
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-newspaper-o"></i> <span> Payment Status</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/tables/order_list.php"><i class="fa fa-circle-o"></i> Payment List </a></li>
+            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Edit Payment </a></li>
+
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-truck"></i> <span>Shipment Process</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Shipment Process </a></li>
+            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Shipment via Map </a></li>
+
           </ul>
         </li>
 
@@ -471,11 +483,12 @@
                   <th style="width: 5px">Title</th>
                   <th style="width: 100px">Customer Name</th>
                   <th style="width: 100px">Customer Surname</th>
-                  <th style="width: 40px">History PO</th>
                   <th style="width: 40px">Current PO</th>
+                  <th style="width: 40px">History PO</th>
+
                 </tr>
                 <tr>
-                  <!-- first 3 Column -->
+                  <!-- first 3 Columns -->
                   <td>1.</td>
                   <td>CTM000001</td>
                   <td>Mr.</td>
@@ -487,15 +500,16 @@
                       </div>
                   </td>
 
+
+                  <!-- PO Current -->
+                  <td><button type="button" class="btn btn-block btn-info btn-xs">PO-9834</button></td>
                   <!-- PO History -->
                   <td><button type="button" class="btn btn-block btn-default btn-xs">PO-8712</button></td>
-                  <!-- PO Current -->
-                  <td><button type="button" class="btn btn-block btn-default btn-xs">PO-9834</button></td>
                 </tr>
 
 
                 <tr>
-                  <!-- first 3 Column -->
+                  <!-- first 3 Columns -->
                   <td>2.</td>
                   <td>CTM000251</td>
                   <td>Ms.</td>
@@ -507,15 +521,16 @@
                       </div>
                   </td>
 
+
+                  <!-- PO Current -->
+                  <td><button type="button" class="btn btn-block btn-info btn-xs">PO-9856</button></td>
                   <!-- PO History -->
                   <td><button type="button" class="btn btn-block btn-default btn-xs">PO-8727</button></td>
-                  <!-- PO Current -->
-                  <td><button type="button" class="btn btn-block btn-default btn-xs">PO-9856</button></td>
                 </tr>
 
 
                 <tr>
-                  <!-- first 3 Column -->
+                  <!-- first 3 Columns -->
                   <td>3.</td>
                   <td>CTM001287</td>
                   <td>Mr.</td>
@@ -529,25 +544,82 @@
                       </div>
                   </td>
 
+
+                  <!-- PO Current -->
+                  <td><button type="button" class="btn btn-block btn-info btn-xs">PO-9887</button></td>
                   <!-- PO History -->
                   <td><button type="button" class="btn btn-block btn-default btn-xs">PO-8790</button></td>
-                  <!-- PO Current -->
-                  <td><button type="button" class="btn btn-block btn-default btn-xs">PO-9887</button></td>
                 </tr>
 
-                <tr>
-                  <td>4.</td>
-                  <td><button type="button" class="btn btn-block btn-default btn-xs">OL-4117</button></td>
 
-                  <!-- Purchase Order Number -->
-                  <td> PO-652348 </td>
+                <tr>
+                  <!-- first 3 Columns -->
+                  <td>4.</td>
+                  <td>CTM001826</td>
+                  <td>Mr.</td>
+
+                  <!-- Customer Name-Surname -->
+                  <td> Klars </td>
                       <div class="progress-bar progress-bar-primary" style="width: 30%"></div>
+
+                  <!--Surname -->
+                      <td>Karmar</td>
                       </div>
                   </td>
 
-                  <td>0000012</td>
-                  <td><span class="label label-danger">Canceled</span></td>
+
+                  <!-- PO Current -->
+                  <td><button type="button" class="btn btn-block btn-info btn-xs">PO-9898</button></td>
+                  <!-- PO History -->
+                  <td><button type="button" class="btn btn-block btn-default btn-xs">PO-8999</button></td>
                 </tr>
+
+
+                <tr>
+                  <!-- first 3 Columns -->
+                  <td>5.</td>
+                  <td>CTM001297</td>
+                  <td>Ms.</td>
+
+                  <!-- Customer Name-Surname -->
+                  <td> June </td>
+                      <div class="progress-bar progress-bar-primary" style="width: 30%"></div>
+
+                  <!--Surname -->
+                      <td>Jeng Jeng </td>
+                      </div>
+                  </td>
+
+                  <!-- PO Current -->
+                  <td><button type="button" class="btn btn-block btn-info btn-xs">PO-9900</button></td>
+                  <!-- PO History -->
+                  <td><button type="button" class="btn btn-block btn-default btn-xs">PO-9911</button></td>
+
+                </tr>
+
+
+                <tr>
+                  <!-- first 3 Column -->
+                  <td>6.</td>
+                  <td>CTM001299</td>
+                  <td>Ms.</td>
+
+                  <!-- Customer Name-Surname -->
+                  <td> Fon </td>
+                      <div class="progress-bar progress-bar-primary" style="width: 30%"></div>
+
+                  <!--Surname -->
+                      <td>Cutemak </td>
+                      </div>
+                  </td>
+
+                  <!-- PO Current -->
+                  <td><button type="button" class="btn btn-block btn-info btn-xs">PO-9991</button></td>
+                  <!-- PO History -->
+                  <td><button type="button" class="btn btn-block btn-default btn-xs">PO-1823</button></td>
+
+                </tr>
+
               </table>
             </div>
             <!-- /.box-body -->
