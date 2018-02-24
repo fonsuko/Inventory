@@ -345,7 +345,7 @@
       <!-- sidebar menu: : style can be found in sidebar.less -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
-        <li class="active treeview">
+        <li class="treeview">
           <a href="#">
             <i class="fa fa-archive"></i> <span>Inventory Stock</span>
             <span class="pull-right-container">
@@ -353,12 +353,12 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="indexreal.php"><i class="fa fa-circle-o"></i> Stock Retails </a></li>
+            <li><a href="indexreal.php"><i class="fa fa-circle-o"></i> Stock Retails </a></li>
             <li><a href="indexreal.php"><i class="fa fa-circle-o"></i> Stock Wholesale </a></li>
           </ul>
         </li>
 
-        <li class="treeview">
+        <li class="active treeview">
           <a href="#">
             <i class="fa fa-edit"></i> <span>Customer</span>
             <span class="pull-right-container">
@@ -366,7 +366,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/tables/customer_list.php"><i class="fa fa-circle-o"></i> Customer List </a></li>
+            <li class="active"><a href="customer_list.php"><i class="fa fa-circle-o"></i> Customer List </a></li>
             <li><a href="pages/forms/add_more.php"><i class="fa fa-circle-o"></i> Create Customer Profile </a></li>
             <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Edit Customer Profile </a></li>
           </ul>
