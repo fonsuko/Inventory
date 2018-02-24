@@ -358,7 +358,7 @@
           </ul>
         </li>
 
-        <li class="treeview">
+        <li class="active treeview">
           <a href="#">
             <i class="fa  fa-cart-arrow-down"></i> <span>Cart</span>
             <span class="pull-right-container">
@@ -366,7 +366,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="selected_product.php"><i class="fa fa-circle-o"></i> Selected Product </a></li>
+            <li class="active"><a href="selected_product.php"><i class="fa fa-circle-o"></i> Selected Product </a></li>
           </ul>
         </li>
 
@@ -384,7 +384,7 @@
           </ul>
         </li>
 
-        <li class=" active treeview">
+        <li class="treeview">
           <a href="#">
               <i class="fa fa-file-text-o"></i> <span>Purchase Order</span>
             <span class="pull-right-container">
@@ -392,7 +392,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Create PO </a></li>
+            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Create PO </a></li>
             <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Customer Order </a></li>
             <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> PO History </a></li>
 
@@ -603,14 +603,68 @@
               <section class="content-header">
                 <h1>
                   Selected Customer
-                  <small> by choose customer from list </small>
-                </h1>    
+                  <small> Choose your register customer </small>
+                </h1>
               </section>
-
             </div>
+            <!-- form start -->
+            <form role="form">
+              <div class="box-body">
+                <div class="form-group">
+
+                  <!-- Select Customer Name-->
+                  <label><b>Customer Name :</b></label>
+                    <select class="form-control">
+                      <option>option 1</option>
+                      <option>option 2</option>
+                      <option>option 3</option>
+                      <option>option 4</option>
+                      <option>option 5</option>
+                    </select>
+                <!--** After Select Customer Name, the anothers Information
+                      will automatically show on another filled box **-->
 
 
-            <!-- /.box-body -->
+                    <label><b>Customer ID :</b></label>
+                      <select class="form-control">
+                        <option>option 1</option>
+                        <option>option 2</option>
+                        <option>option 3</option>
+                        <option>option 4</option>
+                        <option>option 5</option>
+                      </select>
+
+                    <label><b>Telephone Number :</b></label>
+                      <select class="form-control">
+                        <option>option 1</option>
+                        <option>option 2</option>
+                        <option>option 3</option>
+                        <option>option 4</option>
+                        <option>option 5</option>
+                      </select>
+
+                      <label><b>Customer Address :</b></label>
+                        <select class="form-control">
+                          <option>option 1</option>
+                          <option>option 2</option>
+                          <option>option 3</option>
+                          <option>option 4</option>
+                          <option>option 5</option>
+                        </select>
+                </div>
+            <div>
+
+              <!-- /.box-body -->
+
+              <div class="box-footer">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+          </div>
+          <!-- /.box -->
+
+
+
           </div>
           <!-- /.box -->
         </div>
