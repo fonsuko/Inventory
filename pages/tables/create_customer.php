@@ -374,6 +374,18 @@
 
         <li class="treeview">
           <a href="#">
+            <i class="fa  fa-cart-arrow-down"></i> <span>Cart</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="customer_list.php"><i class="fa fa-circle-o"></i> Selected Product </a></li>
+          </ul>
+        </li>
+
+        <li class="treeview">
+          <a href="#">
               <i class="fa fa-file-text-o"></i> <span>Create PO</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>

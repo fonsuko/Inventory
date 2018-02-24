@@ -366,11 +366,11 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="customer_list.php"><i class="fa fa-circle-o"></i> Selected Product </a></li>
+            <li><a href="selected_product.php"><i class="fa fa-circle-o"></i> Selected Product </a></li>
           </ul>
         </li>
 
-        <li class="active treeview">
+        <li class="treeview">
           <a href="#">
             <i class="fa fa-edit"></i> <span>Customer</span>
             <span class="pull-right-container">
@@ -378,22 +378,23 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="customer_list.php"><i class="fa fa-circle-o"></i> Customer List </a></li>
+            <li><a href="customer_list.php"><i class="fa fa-circle-o"></i> Customer List </a></li>
             <li><a href="pages/forms/add_more.php"><i class="fa fa-circle-o"></i> Create Customer Profile </a></li>
             <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Edit Customer Profile </a></li>
           </ul>
         </li>
 
-        <li class="treeview">
+        <li class=" active treeview">
           <a href="#">
-              <i class="fa fa-file-text-o"></i> <span>Create PO</span>
+              <i class="fa fa-file-text-o"></i> <span>Purchase Order</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Create PO </a></li>
+            <li class="active"><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Create PO </a></li>
             <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Customer Order </a></li>
+            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> PO History </a></li>
 
           </ul>
         </li>
@@ -452,13 +453,13 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Customer List
+        Selected Product
         <small> View </small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Customer</a></li>
-        <li class="active">Customer List</li>
+        <li><a href="#">Cart</a></li>
+        <li class="active">Selected Product</li>
       </ol>
     </section>
 
@@ -471,13 +472,13 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header with-border">
-              <h3 class="box-title">Customer List Information</h3>
+              <h3 class="box-title"> List of Product(s) in Cart </h3>
 
               <!-- Search for Order list Number -->
 
               <div class="box-tools">
                 <div class="input-group input-group-sm" style="width: 150px;">
-                  <input type="text" name="table_search" class="form-control pull-right" placeholder="Search ">
+                  <input type="text" name="table_search" class="form-control pull-right" placeholder="Search Product ">
 
                   <div class="input-group-btn">
                     <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
@@ -491,149 +492,95 @@
               <table class="table table-bordered">
                 <tr>
                   <th style="width: 10px">#</th>
-                  <th style="width: 80px">Customer Number</th>
-                  <th style="width: 5px">Title</th>
-                  <th style="width: 100px">Customer Name</th>
-                  <th style="width: 100px">Customer Surname</th>
-                  <th style="width: 40px">Current PO</th>
-                  <th style="width: 40px">History PO</th>
+                  <th style="width: 50px">Product Category</th>
+                  <th style="width: 20px">Product ID</th>
+                  <th style="width: 100px">Product Name</th>
+                  <th style="width: 30px">Price</th>
+                  <th style="width: 40px">Quantity</th>
+                  <th style="width: 40px">Total</th>
+                  <th style="width: 80px">Status</th>
 
                 </tr>
                 <tr>
                   <!-- first 3 Columns -->
                   <td>1.</td>
-                  <td>CTM000001</td>
-                  <td>Mr.</td>
+                  <td>Stationary</td>
+                  <td>PC000152</td>
 
-                  <!-- Customer Name-Surname -->
-                  <td> John </td>
-                      <div class="progress-bar progress-bar-primary" style="width: 30%"></div>
-                      <td>Donahs</td>
-                      </div>
-                  </td>
+                  <!-- Product Name -->
+                  <td> Muji Pencil</td>
 
 
-                  <!-- PO Current -->
-                  <td><button type="button" class="btn btn-block btn-info btn-xs">PO-9834</button></td>
-                  <!-- PO History -->
-                  <td><button type="button" class="btn btn-block btn-default btn-xs">PO-8712</button></td>
+                  <!-- Product Price -->
+                  <td> $5 </td>
+
+
+                  <!-- Product Quantity -->
+                  <td> 20 </td>
+
+                  <!-- Total -->
+                  <td> $100 </td>
+
+                  <!-- Status -->
+                  <td> Reserved For PO</td>
+
                 </tr>
-
 
                 <tr>
                   <!-- first 3 Columns -->
                   <td>2.</td>
-                  <td>CTM000251</td>
-                  <td>Ms.</td>
+                  <td>Sport</td>
+                  <td>SP000189</td>
 
-                  <!-- Customer Name-Surname -->
-                  <td> Yumiko </td>
-                      <div class="progress-bar progress-bar-primary" style="width: 30%"></div>
-                      <td>Otaruza</td>
-                      </div>
-                  </td>
+                  <!-- Product Name -->
+                  <td> Nike Swimming Suite</td>
 
 
-                  <!-- PO Current -->
-                  <td><button type="button" class="btn btn-block btn-info btn-xs">PO-9856</button></td>
-                  <!-- PO History -->
-                  <td><button type="button" class="btn btn-block btn-default btn-xs">PO-8727</button></td>
+                  <!-- Product Price -->
+                  <td> $15 </td>
+
+
+                  <!-- Product Quantity -->
+                  <td> 40 </td>
+
+                  <!-- Total -->
+                  <td> $600 </td>
+
+                  <!-- Status -->
+                  <td> Reserved For PO </td>
+
                 </tr>
-
 
                 <tr>
                   <!-- first 3 Columns -->
                   <td>3.</td>
-                  <td>CTM001287</td>
-                  <td>Mr.</td>
+                  <td>Sport</td>
+                  <td>SP000394</td>
 
-                  <!-- Customer Name-Surname -->
-                  <td> Louis </td>
-                      <div class="progress-bar progress-bar-primary" style="width: 30%"></div>
-
-                  <!--Surname -->
-                      <td>Obrien</td>
-                      </div>
-                  </td>
+                  <!-- Product Name -->
+                  <td> Adidas Shoes</td>
 
 
-                  <!-- PO Current -->
-                  <td><button type="button" class="btn btn-block btn-info btn-xs">PO-9887</button></td>
-                  <!-- PO History -->
-                  <td><button type="button" class="btn btn-block btn-default btn-xs">PO-8790</button></td>
-                </tr>
+                  <!-- Product Price -->
+                  <td> $30 </td>
 
 
-                <tr>
-                  <!-- first 3 Columns -->
-                  <td>4.</td>
-                  <td>CTM001826</td>
-                  <td>Mr.</td>
+                  <!-- Product Quantity -->
+                  <td> 30 </td>
 
-                  <!-- Customer Name-Surname -->
-                  <td> Klars </td>
-                      <div class="progress-bar progress-bar-primary" style="width: 30%"></div>
+                  <!-- Total -->
+                  <td> $900 </td>
 
-                  <!--Surname -->
-                      <td>Karmar</td>
-                      </div>
-                  </td>
-
-
-                  <!-- PO Current -->
-                  <td><button type="button" class="btn btn-block btn-info btn-xs">PO-9898</button></td>
-                  <!-- PO History -->
-                  <td><button type="button" class="btn btn-block btn-default btn-xs">PO-8999</button></td>
-                </tr>
-
-
-                <tr>
-                  <!-- first 3 Columns -->
-                  <td>5.</td>
-                  <td>CTM001297</td>
-                  <td>Ms.</td>
-
-                  <!-- Customer Name-Surname -->
-                  <td> June </td>
-                      <div class="progress-bar progress-bar-primary" style="width: 30%"></div>
-
-                  <!--Surname -->
-                      <td>Jeng Jeng </td>
-                      </div>
-                  </td>
-
-                  <!-- PO Current -->
-                  <td><button type="button" class="btn btn-block btn-info btn-xs">PO-9900</button></td>
-                  <!-- PO History -->
-                  <td><button type="button" class="btn btn-block btn-default btn-xs">PO-9911</button></td>
-
-                </tr>
-
-
-                <tr>
-                  <!-- first 3 Column -->
-                  <td>6.</td>
-                  <td>CTM001299</td>
-                  <td>Ms.</td>
-
-                  <!-- Customer Name-Surname -->
-                  <td> Fon </td>
-                      <div class="progress-bar progress-bar-primary" style="width: 30%"></div>
-
-                  <!--Surname -->
-                      <td>Cutemak </td>
-                      </div>
-                  </td>
-
-                  <!-- PO Current -->
-                  <td><button type="button" class="btn btn-block btn-info btn-xs">PO-9991</button></td>
-                  <!-- PO History -->
-                  <td><button type="button" class="btn btn-block btn-default btn-xs">PO-1823</button></td>
+                  <!-- Status -->
+                  <td> Reserved For PO </td>
 
                 </tr>
 
               </table>
             </div>
+
+
+
             <!-- /.box-body -->
             <div class="box-footer clearfix">
               <ul class="pagination pagination-sm no-margin pull-right">
@@ -645,19 +592,38 @@
               </ul>
             </div>
           </div>
+
           <!-- /.box -->
           <div class="box">
             <!-- /.box-header -->
                 </tr>
               </table>
+
+              <!-- Second Header Point for Select Customer-->
+              <section class="content-header">
+                <h1>
+                  Selected Customer
+                  <small> by choose customer from list </small>
+                </h1>    
+              </section>
+
             </div>
+
+
             <!-- /.box-body -->
           </div>
           <!-- /.box -->
         </div>
         <!-- /.col -->
+        <!-- Content Header (Page header) -->
+
       </div>
       <!-- /.row -->
+
+
+
+
+
       <div class="row">
         <div class="col-xs-12">
 
