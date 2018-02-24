@@ -498,7 +498,7 @@
                   <!-- first 3 Column -->
                   <td>2.</td>
                   <td>CTM000251</td>
-                  <td>Mr.</td>
+                  <td>Ms.</td>
 
                   <!-- Customer Name-Surname -->
                   <td> Yumiko </td>
@@ -515,8 +515,10 @@
 
 
                 <tr>
+                  <!-- first 3 Column -->
                   <td>3.</td>
                   <td>CTM001287</td>
+                  <td>Mr.</td>
 
                   <!-- Customer Name-Surname -->
                   <td> Louis </td>
