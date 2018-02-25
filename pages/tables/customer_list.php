@@ -366,7 +366,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="customer_list.php"><i class="fa fa-circle-o"></i> Selected Product </a></li>
+            <li><a href="selected_product.php"><i class="fa fa-circle-o"></i> Selected Product </a></li>
           </ul>
         </li>
 

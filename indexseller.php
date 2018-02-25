@@ -386,7 +386,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="selected_product.php"><i class="fa fa-circle-o"></i> Selected Product </a></li>
+            <li><a href="pages/tables/selected_product.php"><i class="fa fa-circle-o"></i> Selected Product </a></li>
           </ul>
         </li>
 
@@ -398,7 +398,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="customer_list.php"><i class="fa fa-circle-o"></i> Customer List </a></li>
+            <li><a href="pages/tables/customer_list.php"><i class="fa fa-circle-o"></i> Customer List </a></li>
             <li><a href="create_customer.php"><i class="fa fa-circle-o"></i> Create Customer Profile </a></li>
             <li><a href="edit_customer"><i class="fa fa-circle-o"></i> Edit Customer Profile </a></li>
           </ul>

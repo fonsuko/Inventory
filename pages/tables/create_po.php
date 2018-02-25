@@ -523,42 +523,41 @@
           <table class="table table-striped">
             <thead>
             <tr>
-              <th>Qty</th>
+              <th>Quantity</th>
               <th>Product</th>
-              <th>Serial #</th>
-              <th>Description</th>
+              <th>Product ID</th>
+              <th>Price </th>
               <th>Subtotal</th>
             </tr>
             </thead>
             <tbody>
             <tr>
-              <td>1</td>
-              <td>Call of Duty</td>
-              <td>455-981-221</td>
-              <td>El snort testosterone trophy driving gloves handsome</td>
-              <td>$64.50</td>
+              <td>20</td>
+              <td>Muji Pencil</td>
+              <td>PC000152</td>
+              <td>$5</td>
+              <td>$100.00</td>
             </tr>
+
+
             <tr>
-              <td>1</td>
-              <td>Need for Speed IV</td>
-              <td>247-925-726</td>
-              <td>Wes Anderson umami biodiesel</td>
-              <td>$50.00</td>
+              <td>40</td>
+              <td>Nike Swimming Suite</td>
+              <td>SP000189</td>
+              <td>$15</td>
+              <td>$600.00</td>
             </tr>
+
+
             <tr>
-              <td>1</td>
-              <td>Monsters DVD</td>
-              <td>735-845-642</td>
-              <td>Terry Richardson helvetica tousled street art master</td>
-              <td>$10.70</td>
+              <td>30</td>
+              <td>Adidas Shoes</td>
+              <td>SP000394</td>
+              <td>$30</td>
+              <td>$900.00</td>
             </tr>
-            <tr>
-              <td>1</td>
-              <td>Grown Ups Blue Ray</td>
-              <td>422-568-642</td>
-              <td>Tousled lomo letterpress</td>
-              <td>$25.99</td>
-            </tr>
+
+
             </tbody>
           </table>
         </div>
@@ -582,25 +581,25 @@
         </div>
         <!-- /.col -->
         <div class="col-xs-6">
-          <p class="lead">Amount Due 2/22/2014</p>
+          <p class="lead">Amount Due 1/03/2018</p>
 
           <div class="table-responsive">
             <table class="table">
               <tr>
                 <th style="width:50%">Subtotal:</th>
-                <td>$250.30</td>
+                <td>$1600.00</td>
               </tr>
               <tr>
-                <th>Tax (9.3%)</th>
-                <td>$10.34</td>
+                <th>Tax (7%)</th>
+                <td>$112</td>
               </tr>
               <tr>
                 <th>Shipping:</th>
-                <td>$5.80</td>
+                <td>$5.00</td>
               </tr>
               <tr>
                 <th>Total:</th>
-                <td>$265.24</td>
+                <td>$1,717.00</td>
               </tr>
             </table>
           </div>
