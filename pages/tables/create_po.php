@@ -44,7 +44,7 @@
 
   <header class="main-header">
     <!-- Logo -->
-    <a href="indexreal.php" class="logo">
+    <a href="../../indexreal.php" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <span class="logo-mini"><b>I</b>MS</span>
       <!-- logo for regular state and mobile devices -->
@@ -392,7 +392,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Create PO </a></li>
+            <li class="active"><a href="create_po.php"><i class="fa fa-circle-o"></i> PO Invoice </a></li>
             <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Customer Order </a></li>
             <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> PO History </a></li>
 
@@ -453,230 +453,183 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Create Purchase Order
-        <small> View </small>
+        Puechase Order Generated : Invoice
+        <small>#007612</small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Create PO</a></li>
-        <li class="active">Create PO</li>
+        <li><a href="#">Purchase Order</a></li>
+        <li class="active">PO Invoice</li>
       </ol>
     </section>
 
+    <div class="pad margin no-print">
+      <div class="callout callout-info" style="margin-bottom: 0!important;">
+        <h4><i class="fa fa-info"></i> Note:</h4>
+        This page has been enhanced for printing. Click the print button at the bottom of the invoice to test.
+      </div>
+    </div>
+
     <!-- Main content -->
-
-    <section class="content">
+    <section class="invoice">
+      <!-- title row -->
       <div class="row">
-
-        <!-- ** Extend the tables wides -->
         <div class="col-xs-12">
-          <div class="box">
-            <div class="box-header with-border">
-              <h3 class="box-title">Add </h3>
-
-              <!-- Search for Order list Number -->
-
-              <div class="box-tools">
-                <div class="input-group input-group-sm" style="width: 150px;">
-                  <input type="text" name="table_search" class="form-control pull-right" placeholder="Search ">
-
-                  <div class="input-group-btn">
-                    <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
-                  </div>
-                </div>
-            </div>
-            <!-- /.box-header -->
-
-            <!-- Customer List Tables -->
-            <div class="box-body">
-              <table class="table table-bordered">
-                <tr>
-                  <th style="width: 10px">#</th>
-                  <th style="width: 80px">Customer Number</th>
-                  <th style="width: 5px">Title</th>
-                  <th style="width: 100px">Customer Name</th>
-                  <th style="width: 100px">Customer Surname</th>
-                  <th style="width: 40px">Current PO</th>
-                  <th style="width: 40px">History PO</th>
-
-                </tr>
-                <tr>
-                  <!-- first 3 Columns -->
-                  <td>1.</td>
-                  <td>CTM000001</td>
-                  <td>Mr.</td>
-
-                  <!-- Customer Name-Surname -->
-                  <td> John </td>
-                      <div class="progress-bar progress-bar-primary" style="width: 30%"></div>
-                      <td>Donahs</td>
-                      </div>
-                  </td>
-
-
-                  <!-- PO Current -->
-                  <td><button type="button" class="btn btn-block btn-info btn-xs">PO-9834</button></td>
-                  <!-- PO History -->
-                  <td><button type="button" class="btn btn-block btn-default btn-xs">PO-8712</button></td>
-                </tr>
-
-
-                <tr>
-                  <!-- first 3 Columns -->
-                  <td>2.</td>
-                  <td>CTM000251</td>
-                  <td>Ms.</td>
-
-                  <!-- Customer Name-Surname -->
-                  <td> Yumiko </td>
-                      <div class="progress-bar progress-bar-primary" style="width: 30%"></div>
-                      <td>Otaruza</td>
-                      </div>
-                  </td>
-
-
-                  <!-- PO Current -->
-                  <td><button type="button" class="btn btn-block btn-info btn-xs">PO-9856</button></td>
-                  <!-- PO History -->
-                  <td><button type="button" class="btn btn-block btn-default btn-xs">PO-8727</button></td>
-                </tr>
-
-
-                <tr>
-                  <!-- first 3 Columns -->
-                  <td>3.</td>
-                  <td>CTM001287</td>
-                  <td>Mr.</td>
-
-                  <!-- Customer Name-Surname -->
-                  <td> Louis </td>
-                      <div class="progress-bar progress-bar-primary" style="width: 30%"></div>
-
-                  <!--Surname -->
-                      <td>Obrien</td>
-                      </div>
-                  </td>
-
-
-                  <!-- PO Current -->
-                  <td><button type="button" class="btn btn-block btn-info btn-xs">PO-9887</button></td>
-                  <!-- PO History -->
-                  <td><button type="button" class="btn btn-block btn-default btn-xs">PO-8790</button></td>
-                </tr>
-
-
-                <tr>
-                  <!-- first 3 Columns -->
-                  <td>4.</td>
-                  <td>CTM001826</td>
-                  <td>Mr.</td>
-
-                  <!-- Customer Name-Surname -->
-                  <td> Klars </td>
-                      <div class="progress-bar progress-bar-primary" style="width: 30%"></div>
-
-                  <!--Surname -->
-                      <td>Karmar</td>
-                      </div>
-                  </td>
-
-
-                  <!-- PO Current -->
-                  <td><button type="button" class="btn btn-block btn-info btn-xs">PO-9898</button></td>
-                  <!-- PO History -->
-                  <td><button type="button" class="btn btn-block btn-default btn-xs">PO-8999</button></td>
-                </tr>
-
-
-                <tr>
-                  <!-- first 3 Columns -->
-                  <td>5.</td>
-                  <td>CTM001297</td>
-                  <td>Ms.</td>
-
-                  <!-- Customer Name-Surname -->
-                  <td> June </td>
-                      <div class="progress-bar progress-bar-primary" style="width: 30%"></div>
-
-                  <!--Surname -->
-                      <td>Jeng Jeng </td>
-                      </div>
-                  </td>
-
-                  <!-- PO Current -->
-                  <td><button type="button" class="btn btn-block btn-info btn-xs">PO-9900</button></td>
-                  <!-- PO History -->
-                  <td><button type="button" class="btn btn-block btn-default btn-xs">PO-9911</button></td>
-
-                </tr>
-
-
-                <tr>
-                  <!-- first 3 Column -->
-                  <td>6.</td>
-                  <td>CTM001299</td>
-                  <td>Ms.</td>
-
-                  <!-- Customer Name-Surname -->
-                  <td> Fon </td>
-                      <div class="progress-bar progress-bar-primary" style="width: 30%"></div>
-
-                  <!--Surname -->
-                      <td>Cutemak </td>
-                      </div>
-                  </td>
-
-                  <!-- PO Current -->
-                  <td><button type="button" class="btn btn-block btn-info btn-xs">PO-9991</button></td>
-                  <!-- PO History -->
-                  <td><button type="button" class="btn btn-block btn-default btn-xs">PO-1823</button></td>
-
-                </tr>
-
-              </table>
-            </div>
-            <!-- /.box-body -->
-            <div class="box-footer clearfix">
-              <ul class="pagination pagination-sm no-margin pull-right">
-                <li><a href="#">&laquo;</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">&raquo;</a></li>
-              </ul>
-            </div>
-          </div>
-          <!-- /.box -->
-          <div class="box">
-            <!-- /.box-header -->
-                </tr>
-              </table>
-            </div>
-            <!-- /.box-body -->
-          </div>
-          <!-- /.box -->
+          <h2 class="page-header">
+            <i class="fa fa-globe"></i> Inventory Management Sevice, Inc.
+            <small class="pull-right">Date: 25/02/2018</small>
+          </h2>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- info row -->
+      <div class="row invoice-info">
+        <div class="col-sm-4 invoice-col">
+          From
+          <address>
+            <strong>Seller: Inventory Management Sevice, Inc.</strong><br>
+            795 Folsom Ave, Suite 600<br>
+            San Francisco, CA 94107<br>
+            Phone: (804) 123-5432<br>
+            Email: info@fonsukostudio.com
+          </address>
+        </div>
+        <!-- /.col -->
+        <div class="col-sm-4 invoice-col">
+          To
+          <address>
+            <strong>John Doe</strong><br>
+            795 Folsom Ave, Suite 600<br>
+            San Francisco, CA 94107<br>
+            Phone: (555) 539-1037<br>
+            Email: john.doe@example.com
+          </address>
+        </div>
+        <!-- /.col -->
+        <div class="col-sm-4 invoice-col">
+          <b>Invoice #007612</b><br>
+          <br>
+          <b>Order List Number:</b> OL-4114<br>
+          <b>Payment Due:</b> 01/03/2018<br>
+          <b>Account:</b> 432131
         </div>
         <!-- /.col -->
       </div>
       <!-- /.row -->
+
+      <!-- Table row -->
       <div class="row">
+        <div class="col-xs-12 table-responsive">
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th>Qty</th>
+              <th>Product</th>
+              <th>Serial #</th>
+              <th>Description</th>
+              <th>Subtotal</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>1</td>
+              <td>Call of Duty</td>
+              <td>455-981-221</td>
+              <td>El snort testosterone trophy driving gloves handsome</td>
+              <td>$64.50</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Need for Speed IV</td>
+              <td>247-925-726</td>
+              <td>Wes Anderson umami biodiesel</td>
+              <td>$50.00</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Monsters DVD</td>
+              <td>735-845-642</td>
+              <td>Terry Richardson helvetica tousled street art master</td>
+              <td>$10.70</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Grown Ups Blue Ray</td>
+              <td>422-568-642</td>
+              <td>Tousled lomo letterpress</td>
+              <td>$25.99</td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+      <div class="row">
+        <!-- accepted payments column -->
+        <div class="col-xs-6">
+          <p class="lead">Payment Methods:</p>
+          <img src="../../dist/img/credit/visa.png" alt="Visa">
+          <img src="../../dist/img/credit/mastercard.png" alt="Mastercard">
+          <img src="../../dist/img/credit/american-express.png" alt="American Express">
+          <img src="../../dist/img/credit/paypal2.png" alt="Paypal">
+
+          <p class="text-muted well well-sm no-shadow" style="margin-top: 10px;">
+            Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem plugg
+            dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra.
+          </p>
+        </div>
+        <!-- /.col -->
+        <div class="col-xs-6">
+          <p class="lead">Amount Due 2/22/2014</p>
+
+          <div class="table-responsive">
+            <table class="table">
+              <tr>
+                <th style="width:50%">Subtotal:</th>
+                <td>$250.30</td>
+              </tr>
+              <tr>
+                <th>Tax (9.3%)</th>
+                <td>$10.34</td>
+              </tr>
+              <tr>
+                <th>Shipping:</th>
+                <td>$5.80</td>
+              </tr>
+              <tr>
+                <th>Total:</th>
+                <td>$265.24</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+
+      <!-- this row will not appear when printing -->
+      <div class="row no-print">
         <div class="col-xs-12">
-
-
-          <!-- /.box -->
+          <a href="invoice-print.html" target="_blank" class="btn btn-default"><i class="fa fa-print"></i> Print</a>
+          <button type="button" class="btn btn-success pull-right"><i class="fa fa-credit-card"></i> Submit Payment
+          </button>
+          <button type="button" class="btn btn-primary pull-right" style="margin-right: 5px;">
+            <i class="fa fa-download"></i> Generate PDF
+          </button>
         </div>
       </div>
     </section>
     <!-- /.content -->
+    <div class="clearfix"></div>
   </div>
-
-
   <!-- /.content-wrapper -->
-  <footer class="main-footer">
+  <footer class="main-footer no-print">
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.4.0
     </div>
-    <strong>Copyright &copy; 2017-2018 <a href="https://github.com/fonsuko">Fonsuko Studio</a>.</strong> All rights
+    <strong>Copyright &copy; 2018 <a href="https://github.com/fonsuko">Fonsuko Studio</a>.</strong> All rights
     reserved.
   </footer>
 
@@ -873,20 +826,18 @@
   <!-- Add the sidebar's background. This div must be placed
        immediately after the control sidebar -->
   <div class="control-sidebar-bg"></div>
-</div>
-<!-- ./wrapper -->
+  </div>
+  <!-- ./wrapper -->
 
-<!-- jQuery 3 -->
-<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
-<!-- Bootstrap 3.3.7 -->
-<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- Slimscroll -->
-<script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-<!-- FastClick -->
-<script src="../../bower_components/fastclick/lib/fastclick.js"></script>
-<!-- AdminLTE App -->
-<script src="../../dist/js/adminlte.min.js"></script>
-<!-- AdminLTE for demo purposes -->
-<script src="../../dist/js/demo.js"></script>
-</body>
-</html>
+  <!-- jQuery 3 -->
+  <script src="../../bower_components/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap 3.3.7 -->
+  <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- FastClick -->
+  <script src="../../bower_components/fastclick/lib/fastclick.js"></script>
+  <!-- AdminLTE App -->
+  <script src="../../dist/js/adminlte.min.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="../../dist/js/demo.js"></script>
+  </body>
+  </html>

@@ -392,7 +392,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Create PO </a></li>
+            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> PO Invoice </a></li>
             <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Customer Order </a></li>
             <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> PO History </a></li>
 

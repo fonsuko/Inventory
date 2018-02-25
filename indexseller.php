@@ -373,8 +373,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="indexreal.php"><i class="fa fa-circle-o"></i> Stock Retails </a></li>
-            <li><a href="indexreal.php"><i class="fa fa-circle-o"></i> Stock Wholesale </a></li>
+            <li class="active"><a href="indexseller.php"><i class="fa fa-circle-o"></i> Stock Retails </a></li>
+            <li><a href="indexseller.php"><i class="fa fa-circle-o"></i> Stock Wholesale </a></li>
           </ul>
         </li>
 
@@ -386,7 +386,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="customer_list.php"><i class="fa fa-circle-o"></i> Selected Product </a></li>
+            <li><a href="selected_product.php"><i class="fa fa-circle-o"></i> Selected Product </a></li>
           </ul>
         </li>
 
@@ -398,21 +398,21 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/tables/customer_list.php"><i class="fa fa-circle-o"></i> Customer List </a></li>
-            <li><a href="pages/forms/add_more.php"><i class="fa fa-circle-o"></i> Create Customer Profile </a></li>
-            <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Edit Customer Profile </a></li>
+            <li><a href="customer_list.php"><i class="fa fa-circle-o"></i> Customer List </a></li>
+            <li><a href="create_customer.php"><i class="fa fa-circle-o"></i> Create Customer Profile </a></li>
+            <li><a href="edit_customer"><i class="fa fa-circle-o"></i> Edit Customer Profile </a></li>
           </ul>
         </li>
 
         <li class="treeview">
           <a href="#">
-              <i class="fa fa-file-text-o"></i> <span>Create PO</span>
+              <i class="fa fa-file-text-o"></i> <span>Purchase Order</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Create PO </a></li>
+            <li><a href="create_po.php"><i class="fa fa-circle-o"></i> PO Invoice </a></li>
             <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Customer Order </a></li>
 
           </ul>
