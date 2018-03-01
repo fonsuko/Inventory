@@ -601,6 +601,31 @@
 
                 </tr>
 
+                <tr>
+                  <!-- first 3 Columns -->
+                  <td>5.</td>
+                  <td>Sport</td>
+                  <td>SP000399</td>
+
+                  <!-- Product Name -->
+                  <td> Reebok Shoes</td>
+
+
+                  <!-- Product Price -->
+                  <td> $30 </td>
+
+
+                  <!-- Product Quantity -->
+                  <td> 30 </td>
+
+                  <!-- Total -->
+                  <td> $900 </td>
+
+                  <!-- Status -->
+                  <td> Reserved For PO </td>
+
+                </tr>
+
               </table>
             </div>
 
