@@ -774,7 +774,7 @@
             </label>
 
             <p>
-              Other sets of options are available
+              Other sets of options are available!
             </p>
           </div>
           <!-- /.form-group -->
