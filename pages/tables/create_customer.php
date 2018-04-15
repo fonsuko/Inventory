@@ -97,28 +97,41 @@
 
             <div class="box-body">
               <div class="input-group">
-                <span class="input-group-addon">Name</span>
-                <input type="text" class="form-control" placeholder="eg. Daisie, Luca, John">
+                <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+                <input type="email" class="form-control" placeholder="Name">
               </div>
               <br>
 
               <div class="input-group">
-                <span class="input-group-addon">Surname</span>
-                <input type="text" class="form-control" placeholder="Only an alphabet">
+                <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
+                <input type="email" class="form-control" placeholder="Surname">
               </div>
               <br>
 
               <div class="input-group">
-                <span class="input-group-addon">Address</span>
-                <input type="text" class="form-control">
+                <span class="input-group-addon"><i class="fa fa-institution"></i></span>
+                <input type="email" class="form-control" placeholder="Address">
               </div>
+              <br>
 
-              <h4>With icons</h4>
               <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
                 <input type="email" class="form-control" placeholder="Email">
               </div>
               <br>
+
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-phone-square"></i></span>
+                <input type="email" class="form-control" placeholder="Phone Number">
+              </div>
+              <br>
+
+              <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-object-group"></i></span>
+                <input type="email" class="form-control" placeholder="ID Card Number">
+              </div>
+              <br>
+
 
               <div class="input-group">
                 <input type="text" class="form-control">
