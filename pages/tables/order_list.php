@@ -1,5 +1,5 @@
-<?php 
-  session_start(); 
+<?php
+  session_start();
   include('../../template/top_menu.php');
   include('../../template/left_menu.php');
 
@@ -60,7 +60,7 @@
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
-    <?php 
+    <?php
     create_top_menu();
     create_left_menu('seller','order');
     ?>
