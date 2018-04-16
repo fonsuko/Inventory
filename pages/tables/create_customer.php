@@ -97,6 +97,16 @@
 
             <div class="box-body">
               <div class="input-group">
+                <span class="input-group-addon">Title:</span>
+                <select class="form-control">
+                  <option>Mr.</option>
+                  <option>Mrs.</option>
+                  <option>Ms.</option>
+                </select>
+              </div>
+              <br>
+
+              <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-pencil"></i></span>
                 <input type="email" class="form-control" placeholder="Name">
               </div>
@@ -127,81 +137,26 @@
               <br>
 
               <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-phone-square"></i></span>
+                <input type="email" class="form-control" placeholder="Mobile Number">
+              </div>
+              <br>
+
+
+              <div class="input-group">
                 <span class="input-group-addon"><i class="fa fa-object-group"></i></span>
                 <input type="email" class="form-control" placeholder="ID Card Number">
               </div>
               <br>
 
 
-              <div class="input-group">
-                <input type="text" class="form-control">
-                <span class="input-group-addon"><i class="fa fa-check"></i></span>
-              </div>
-              <br>
+              <div class="form-group">
+                <label for="exampleInputFile">Profile image :</label>
+                <input type="file" id="exampleInputFile">
 
-              <div class="input-group">
-                <span class="input-group-addon"><i class="fa fa-dollar"></i></span>
-                <input type="text" class="form-control">
-                <span class="input-group-addon"><i class="fa fa-ambulance"></i></span>
+                <p class="help-block">Image size should not be more than 2 KB </p>
               </div>
 
-              <h4>With checkbox and radio inputs</h4>
-
-              <div class="row">
-                <div class="col-lg-6">
-                  <div class="input-group">
-                        <span class="input-group-addon">
-                          <input type="checkbox">
-                        </span>
-                    <input type="text" class="form-control">
-                  </div>
-                  <!-- /input-group -->
-                </div>
-                <!-- /.col-lg-6 -->
-                <div class="col-lg-6">
-                  <div class="input-group">
-                        <span class="input-group-addon">
-                          <input type="radio">
-                        </span>
-                    <input type="text" class="form-control">
-                  </div>
-                  <!-- /input-group -->
-                </div>
-                <!-- /.col-lg-6 -->
-              </div>
-              <!-- /.row -->
-
-              <h4>With buttons</h4>
-
-              <p class="margin">Large: <code>.input-group.input-group-lg</code></p>
-
-              <div class="input-group input-group-lg">
-                <div class="input-group-btn">
-                  <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown">Action
-                    <span class="fa fa-caret-down"></span></button>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
-                  </ul>
-                </div>
-                <!-- /btn-group -->
-                <input type="text" class="form-control">
-              </div>
-              <!-- /input-group -->
-              <p class="margin">Normal</p>
-
-              <div class="input-group">
-                <div class="input-group-btn">
-                  <button type="button" class="btn btn-danger">Action</button>
-                </div>
-                <!-- /btn-group -->
-                <input type="text" class="form-control">
-              </div>
-              <!-- /input-group -->
-              <p class="margin">Small <code>.input-group.input-group-sm</code></p>
 
               <div class="input-group input-group-sm">
                 <input type="text" class="form-control">
