@@ -62,7 +62,7 @@
 
     <?php
     create_top_menu();
-    create_left_menu('seller','customer','b');
+    create_left_menu('seller','customer','c');
     ?>
 
   <!-- Content Wrapper. Contains page content -->
@@ -70,13 +70,13 @@
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Create Customer Profile
+        Edit Customer Profile
         <small> Fill in the form! </small>
       </h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li><a href="#">Customer</a></li>
-        <li class="active">Create Customer Profile</li>
+        <li class="active">Edit Customer Profile</li>
       </ol>
     </section>
 
@@ -89,7 +89,7 @@
         <div class="col-xs-12">
           <div class="box">
             <div class="box-header with-border">
-              <h3 class="box-title">Input Customer Informations</h3>
+              <h3 class="box-title">Edit Customer Informations</h3>
 
             <!-- /.box-header -->
 
@@ -164,7 +164,7 @@
               </div>
 
 
-          
+
           </div>
           <!-- /.box -->
           <div class="box">
