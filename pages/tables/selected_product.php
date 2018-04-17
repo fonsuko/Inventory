@@ -1,5 +1,5 @@
 <?php 
-  session_start(); 
+  session_start();
   include('../../template/top_menu.php');
   include('../../template/left_menu.php');
   if(!isset($_SESSION['type'])){
@@ -59,7 +59,7 @@
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
-  <?php 
+  <?php
   create_top_menu();
   create_left_menu('seller','cart');
   ?>
@@ -115,132 +115,115 @@
                   <th style="width: 40px">Quantity</th>
                   <th style="width: 40px">Total</th>
                   <th style="width: 80px">Status</th>
-
-                </tr>
-                <tr>
-                  <!-- first 3 Columns -->
-                  <td>1.</td>
-                  <td>Stationary</td>
-                  <td>PC000152</td>
-
-                  <!-- Product Name -->
-                  <td> Muji Pencil</td>
-
-
-                  <!-- Product Price -->
-                  <td> $5 </td>
-
-
-                  <!-- Product Quantity -->
-                  <td> 20 </td>
-
-                  <!-- Total -->
-                  <td> $100 </td>
-
-                  <!-- Status -->
-                  <td> Reserved For PO</td>
+                  <th style="width: 20px">Remove</th>
 
                 </tr>
 
-                <tr>
-                  <!-- first 3 Columns -->
-                  <td>2.</td>
-                  <td>Sport</td>
-                  <td>SP000189</td>
+<?php
+  $ids = array();
+  $q = array();
+  foreach ($_SESSION['tmpcart'] as $p) {
+    echo implode(",",$p)."|";
+    array_push($ids,$p[0]);
+    array_push($q,$p[1]);
+  }
+  $ids_string =  implode(',',$ids);
 
-                  <!-- Product Name -->
-                  <td> Nike Swimming Suite</td>
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "ims";
 
+  // Create connection
+  $conn = mysqli_connect($servername, $username, $password, $dbname);
+  // Check connection
+  if (!$conn) {
+      die("Connection failed: " . mysqli_connect_error());
+  }
+  $sql = "SELECT * FROM product WHERE id IN ($ids_string )";
+  $result = mysqli_query($conn,$sql);
+  $i = 1;
+  if($result){
+    while($row = mysqli_fetch_assoc($result)){
+      foreach ($_SESSION['tmpcart'] as $p) {
+        if($p[0] == $row['id']){
+          $quantity = $p[1];
+        }
+      }
+      echo "<tr>";
+      echo "<td>".$i."</td>";
+      echo "<td>".$row['type']."</td>";
+      echo "<td>".$row['id']."</td>";
+      echo "<td>".$row['name']."</td>";
+      echo "<td>".$row['sppp']."</td>";
+      echo "<td><input onchange={update_q(".$row['id'].")} type='text' name='quantity".$row['id']."' id='quantity".$row['id']."' value='".$quantity."'><button type='input' onclick={add_q(".$row['id'].")}>+</button><button type='input' onclick={deduct_q(".$row['id'].")}>-</button></td>";
+      echo "<input type='hidden' id='available_".$row['id']."' value='".$row['quantity']."'>";
+      echo "<td>".$row['sppp']*$quantity."</td>";
+      echo "<td>".$i."</td>";
+      echo "<td><a href='#' onclick={remove(".$row['id'].")}><i class='fa fa-close' style='font-size:24px;color:red'></i></td>";
+      echo "</tr>";
+      $i = $i+1;
+    }
+  } else {
+    echo "<p>no product selected</p>";
+  }
+?>
+<script>
+  function check_exceed(id,q){
+    a = document.getElementById('available_'+id).value
+    console.log(a,q)
+    parseInt(a)<parseInt(q)? console.log('yes'): console.log('no')
+    if(parseInt(a)<parseInt(q)){return parseInt(a)}
+    else {return false}
+  }
+  function update_q(i){
+    d = document.getElementById('quantity'+i).value
+    if(a=check_exceed(i,d)){
+      alert('exceed the available quantity: '+a)
+      location.reload()
+    } else {
+      $.ajax({
+            url: 'http://localhost/Inventory/tmp_cart.php?p='+i+'&q='+d+'&u=true',
+            type: 'GET',
+            success : function(data) {
+              //console.log(data);
+              location.reload();
+            }
+          });
+    }
+  }
+  function remove(id){
+    console.log('remove: '+id)
+    $.ajax({
+            url: 'http://localhost/Inventory/tmp_cart.php?r='+id,
+            type: 'GET',
+            success : function(data) {
+              //console.log(data);
+              location.reload();
+            }
+          });
 
-                  <!-- Product Price -->
-                  <td> $15 </td>
+  }
+  function add_q(i){
+    d = document.getElementById('quantity'+i).value
+    //alert(d)
+    q = parseInt(d)+1
+    document.getElementById('quantity'+i).value = q.toString()
+    update_q(i)
+  }
 
+  function deduct_q(i){
+    d = document.getElementById('quantity'+i).value
+    q = parseInt(d)-1
+    if (q>0) {
+      document.getElementById('quantity'+i).value = q.toString()
+      update_q(i)
+    } else {
+      if(confirm('do you want to delete the item')){remove(i)}
+    }
 
-                  <!-- Product Quantity -->
-                  <td> 40 </td>
-
-                  <!-- Total -->
-                  <td> $600 </td>
-
-                  <!-- Status -->
-                  <td> Reserved For PO </td>
-
-                </tr>
-
-                <tr>
-                  <!-- first 3 Columns -->
-                  <td>3.</td>
-                  <td>Sport</td>
-                  <td>SP000394</td>
-
-                  <!-- Product Name -->
-                  <td> Adidas Shoes</td>
-
-
-                  <!-- Product Price -->
-                  <td> $30 </td>
-
-
-                  <!-- Product Quantity -->
-                  <td> 30 </td>
-
-                  <!-- Total -->
-                  <td> $900 </td>
-
-                  <!-- Status -->
-                  <td> Reserved For PO </td>
-
-                </tr>
-
-                <tr>
-                  <!-- first 3 Columns -->
-                  <td>4.</td>
-                  <td>Sport</td>
-                  <td>SP000396</td>
-
-                  <!-- Product Name -->
-                  <td> Acis Shoes</td>
-
-
-                  <!-- Product Price -->
-                  <td> $30 </td>
-
-
-                  <!-- Product Quantity -->
-                  <td> 30 </td>
-
-                  <!-- Total -->
-                  <td> $900 </td>
-
-                  <!-- Status -->
-                  <td> Reserved For PO </td>
-
-                </tr>
-
-                <tr>
-                  <!-- first 3 Columns -->
-                  <td>5.</td>
-                  <td>Sport</td>
-                  <td>SP000399</td>
-
-                  <!-- Product Name -->
-                  <td> Reebok Shoes</td>
-
-
-                  <!-- Product Price -->
-                  <td> $30 </td>
-
-
-                  <!-- Product Quantity -->
-                  <td> 30 </td>
-
-                  <!-- Total -->
-                  <td> $900 </td>
-
-                  <!-- Status -->
-                  <td> Reserved For PO </td>
-
-                </tr>
+  }
+</script>
 
               </table>
             </div>

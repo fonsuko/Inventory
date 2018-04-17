@@ -62,7 +62,7 @@
 
     <?php
     create_top_menu();
-    create_left_menu('seller','order');
+    create_left_menu('staff','list');
     ?>
 
   <!-- Content Wrapper. Contains page content -->
