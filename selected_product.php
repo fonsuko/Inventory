@@ -1,22 +1,20 @@
 <?php 
   session_start(); 
-  include('./template/top_menu.php');
-  include('./template/left_menu.php');
-
+  include('../../template/top_menu.php');
+  include('../../template/left_menu.php');
   if(!isset($_SESSION['type'])){
-    header("Location: loginses.php");
+    header("Location: ../../loginses.php");
   } else {
     //echo "You are " . $_SESSION['type'] . ". ";
     if($_SESSION['type']=='seller' || $_SESSION['type']=='admin'){
       //echo "You have permission. ";
     } else {
       echo "You do not have permission.";
-      echo "<br><a href=loginses.php>Go to login page</a>";
+      echo "<br><a href=/Inventory/loginses.php>Go to login page</a>";
       exit();
     }
   }
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -26,16 +24,16 @@
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.7 -->
-  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../../bower_components/bootstrap/dist/css/bootstrap.min.css">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../../bower_components/font-awesome/css/font-awesome.min.css">
   <!-- Ionicons -->
-  <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+  <link rel="stylesheet" href="../../bower_components/Ionicons/css/ionicons.min.css">
   <!-- Theme style -->
-  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
   <!-- AdminLTE Skins. Choose a skin from the css/skins
        folder instead of downloading all of them to reduce the load. -->
-  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+  <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
 
   <!-- Morris chart -->
   <link rel="stylesheet" href="bower_components/morris.js/morris.css">
@@ -61,43 +59,76 @@
 <body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
-    <?php create_top_menu(); ?>
- 
-    <?php create_left_menu("seller","inventory"); ?>
+  <?php 
+  create_top_menu();
+  create_left_menu('seller','cart');
+  ?>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <h1>
-        Stock Retails
-        <small>Control panel</small>
+        Selected Product
+        <small> View </small>
       </h1>
       <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-archive"></i> Home</a></li>
-        <li>Inventory Stock</li>
-        <li class="active">Stock Retails</li>
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li><a href="#">Cart</a></li>
+        <li class="active">Selected Product</li>
       </ol>
-      <br>
-      <label><b>Select category :</b></label>
-      <select class="form-control" style="width:200px;display:inline-block">
-        <option>option 1</option>
-        <option>option 2</option>
-        <option>option 3</option>
-        <option>option 4</option>
-        <option>option 5</option>
-      </select>
-      <label><b> or </b></label>
-      <input type="text" placeholder="search product" style="width:200px;display:inline-block">
-      <button type="submit" style="display:inline-block">Search</button>
     </section>
 
     <!-- Main content -->
+
     <section class="content">
-      <!-- Small boxes (Stat box) -->
       <div class="row">
 
+        <!-- ** Extend the tables wides -->
+        <div class="col-xs-12">
+          <div class="box">
+            <div class="box-header with-border">
+              <h3 class="box-title"> List of Product(s) in Cart </h3>
+
+              <!-- Search for Order list Number -->
+
+              <div class="box-tools">
+                <div class="input-group input-group-sm" style="width: 150px;">
+                  <input type="text" name="table_search" class="form-control pull-right" placeholder="Search Product ">
+
+                  <div class="input-group-btn">
+                    <button type="submit" class="btn btn-default"><i class="fa fa-search"></i></button>
+                  </div>
+                </div>
+            </div>
+            <!-- /.box-header -->
+
+            <!-- Customer List Tables -->
+            <div class="box-body">
+              <table class="table table-bordered">
+                <tr>
+                  <th style="width: 10px">#</th>
+                  <th style="width: 50px">Product Category</th>
+                  <th style="width: 20px">Product ID</th>
+                  <th style="width: 100px">Product Name</th>
+                  <th style="width: 30px">Price</th>
+                  <th style="width: 40px">Quantity</th>
+                  <th style="width: 40px">Total</th>
+                  <th style="width: 80px">Status</th>
+                  <th style="width: 20px">Remove</th>
+
+                </tr>
+
 <?php
+  $ids = array();
+  $q = array();
+  foreach ($_SESSION['tmpcart'] as $p) {
+    echo implode(",",$p)."|";
+    array_push($ids,$p[0]);
+    array_push($q,$p[1]);
+  }
+  $ids_string =  implode(',',$ids);
+
   $servername = "localhost";
   $username = "root";
   $password = "";
@@ -109,114 +140,212 @@
   if (!$conn) {
       die("Connection failed: " . mysqli_connect_error());
   }
-  $sql = "SELECT * FROM product";
+  $sql = "SELECT * FROM product WHERE id IN ($ids_string )";
   $result = mysqli_query($conn,$sql);
-  $index = 0;
-  while($row = mysqli_fetch_assoc($result)){
-
-    if($row['img']==NULL){
-      $image= './pimgs/no_img.svg';
-    } else {
-      $image = './pimgs/' . $row['img'];
+  $i = 1;
+  if($result){
+    while($row = mysqli_fetch_assoc($result)){
+      foreach ($_SESSION['tmpcart'] as $p) {
+        if($p[0] == $row['id']){
+          $quantity = $p[1];
+        }
+      }
+      echo "<tr>";
+      echo "<td>".$i."</td>";
+      echo "<td>".$row['type']."</td>";
+      echo "<td>".$row['id']."</td>";
+      echo "<td>".$row['name']."</td>";
+      echo "<td>".$row['sppp']."</td>";
+      echo "<td><input onchange={update_q(".$row['id'].")} type='text' name='quantity".$row['id']."' id='quantity".$row['id']."' value='".$quantity."'><button type='input' onclick={add_q(".$row['id'].")}>+</button><button type='input' onclick={deduct_q(".$row['id'].")}>-</button></td>";
+      echo "<input type='hidden' id='available_".$row['id']."' value='".$row['quantity']."'>";
+      echo "<td>".$row['sppp']*$quantity."</td>";
+      echo "<td>".$i."</td>";
+      echo "<td><a href='#' onclick={remove(".$row['id'].")}><i class='fa fa-close' style='font-size:24px;color:red'></i></td>";
+      echo "</tr>";
+      $i = $i+1;
     }
-$print = <<<End
-<div class="col-lg-4 col-xs-6" id="product_{$index}" style="display:none">
-<!-- small box -->
-<div class="small-box " style="background-color:#d2d6de;color:black !important;">
-  <div class="inner">
-  <img src="{$image}" style="width:100%;max-height:200px;">
-
-    <p>{$row['brand']}</p>
-    <p>{$row['name']}</p>
-    <p>{$row['sppp']}</p>
-    <p>Available: <b id="a_{$row['id']}">{$row['quantity']}</b></p>
-    <p>Buying: <input type="text" id="q_{$row['id']}"></p>
-
-  </div>
-  <a href="#" onclick={order({$row['id']})} class="small-box-footer">Order <i class="fa fa-arrow-circle-right"></i></a>
-</div>
-</div>
-End;
-    echo $print;
-    $index = $index + 1;
+  } else {
+    echo "<p>no product selected</p>";
   }
 ?>
-<button onclick={prevpage()}>Previous</button>
-<button onclick={nextpage()}>Next</button>
-<input type='hidden' value='1' id='hidden_page_count'>
-<input type='hidden' value='1' id='hidden_current_page'>
 <script>
-  function order(id){
-    quantity = document.getElementById('q_'+id).value
-    available = document.getElementById('a_'+id).value
-    if (quantity > available){
-      alert('exceed available quantity')
+  function check_exceed(id,q){
+    a = document.getElementById('available_'+id).value
+    console.log(a,q)
+    parseInt(a)<parseInt(q)? console.log('yes'): console.log('no')
+    if(parseInt(a)<parseInt(q)){return parseInt(a)}
+    else {return false}
+  }
+  function update_q(i){
+    d = document.getElementById('quantity'+i).value
+    if(a=check_exceed(i,d)){
+      alert('exceed the available quantity: '+a)
+      location.reload()
     } else {
       $.ajax({
-          url: 'http://localhost/Inventory/tmp_cart.php?p='+id+'&q='+quantity+'&u=false',
-          type: 'GET',
-          success : function(data) {
-            console.log(data);
-            let c = confirm('go to cart?')
-            if(c){
-              window.location = './pages/tables/selected_product.php'
+            url: 'http://localhost/Inventory/tmp_cart.php?p='+i+'&q='+d+'&u=true',
+            type: 'GET',
+            success : function(data) {
+              //console.log(data);
+              location.reload();
             }
-          }
-        });
+          });
     }
   }
-  function find_total_pages(){
-    var products = document.querySelectorAll('[id^="product_"]');
-    console.log('product: ',products.length)
-    document.getElementById('hidden_page_count').value = Math.ceil(products.length/6)
-    for(i=0;i<=5;i++){
-        document.getElementById('product_'+i.toString()).style.display = 'block'
-      }
-  }
-  find_total_pages()
+  function remove(id){
+    console.log('remove: '+id)
+    $.ajax({
+            url: 'http://localhost/Inventory/tmp_cart.php?r='+id,
+            type: 'GET',
+            success : function(data) {
+              //console.log(data);
+              location.reload();
+            }
+          });
 
-  function nextpage(){
-    current = parseInt(document.getElementById('hidden_current_page').value)
-    last = parseInt(document.getElementById('hidden_page_count').value)
-    console.log('next: This page is ', current+1)
-    console.log(last)
-    current = current+1
-    if(current<=last){
-      var other_product = document.querySelectorAll('[id^="product_"]');
-      other_product.forEach((product)=>{console.log(product.style.display = 'none')})
-      for(i=6*(current-1);i<=6*(current)-1;i++){
-        document.getElementById('product_'+i.toString()).style.display = 'block'
-      }
-      document.getElementById('hidden_current_page').value = current
-    }
+  }
+  function add_q(i){
+    d = document.getElementById('quantity'+i).value
+    //alert(d)
+    q = parseInt(d)+1
+    document.getElementById('quantity'+i).value = q.toString()
+    update_q(i)
   }
 
-  function prevpage(){
-    current = parseInt(document.getElementById('hidden_current_page').value)
-    console.log('prev-current:',current)
-    if(current>1){
-      var other_product = document.querySelectorAll('[id^="product_"]');
-      other_product.forEach((product)=>{console.log(product.style.display = 'none')})
-      for(i=6*(current-2);i<=6*(current-1)-1;i++){
-        document.getElementById('product_'+i.toString()).style.display = 'block'
-      }
-      document.getElementById('hidden_current_page').value = current-1
+  function deduct_q(i){
+    d = document.getElementById('quantity'+i).value
+    q = parseInt(d)-1
+    if (q>0) {
+      document.getElementById('quantity'+i).value = q.toString()
+      update_q(i)
+    } else {
+      if(confirm('do you want to delete the item')){remove(i)}
     }
+    
   }
 </script>
 
+              </table>
+            </div>
+
+
+
+            <!-- /.box-body -->
+            <div class="box-footer clearfix">
+              <ul class="pagination pagination-sm no-margin pull-right">
+                <li><a href="#">&laquo;</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">&raquo;</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- /.box -->
+          <div class="box">
+            <!-- /.box-header -->
+                </tr>
+              </table>
+
+              <!-- Second Header Point for Select Customer-->
+              <section class="content-header">
+                <h1>
+                  Select Customer
+                  <small> Choose your register customer </small>
+                </h1>
+              </section>
+            </div>
+            <!-- form start -->
+            <form role="form">
+              <div class="box-body">
+                <div class="form-group">
+
+                  <!-- Select Customer Name-->
+                  <label><b>Customer Name :</b></label>
+                    <select class="form-control">
+                      <option>option 1</option>
+                      <option>option 2</option>
+                      <option>option 3</option>
+                      <option>option 4</option>
+                      <option>option 5</option>
+                    </select>
+                <!--** After Select Customer Name, the anothers Information
+                      will automatically show on another filled box **-->
+
+
+                    <label><b>Customer ID :</b></label>
+                      <select class="form-control">
+                        <option>option 1</option>
+                        <option>option 2</option>
+                        <option>option 3</option>
+                        <option>option 4</option>
+                        <option>option 5</option>
+                      </select>
+
+                    <label><b>Telephone Number :</b></label>
+                      <select class="form-control">
+                        <option>option 1</option>
+                        <option>option 2</option>
+                        <option>option 3</option>
+                        <option>option 4</option>
+                        <option>option 5</option>
+                      </select>
+
+                      <label><b>Customer Address :</b></label>
+                        <select class="form-control">
+                          <option>option 1</option>
+                          <option>option 2</option>
+                          <option>option 3</option>
+                          <option>option 4</option>
+                          <option>option 5</option>
+                        </select>
+                </div>
+
+
+              <!-- /.box-body -->
+
+              <div>
+                <button type="submit" class="btn btn-primary">Create Purchase Order</button>
+              </div>
+
+            </form>
+          </div>
+          <!-- /.box -->
+
+
+
+          </div>
+          <!-- /.box -->
+        </div>
+        <!-- /.col -->
+        <!-- Content Header (Page header) -->
 
       </div>
+      <!-- /.row -->
 
+
+
+
+
+      <div class="row">
+        <div class="col-xs-12">
+
+
+          <!-- /.box -->
+        </div>
+      </div>
     </section>
     <!-- /.content -->
   </div>
+
+
   <!-- /.content-wrapper -->
   <footer class="main-footer">
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.4.0
     </div>
-    <strong>Copyright &copy; 2018 <a href="https://github.com/fonsuko">Fonsuko Studio</a>.</strong> All rights
+    <strong>Copyright &copy; 2017-2018 <a href="https://github.com/fonsuko">Fonsuko Studio</a>.</strong> All rights
     reserved.
   </footer>
 
@@ -417,41 +546,16 @@ End;
 <!-- ./wrapper -->
 
 <!-- jQuery 3 -->
-<script src="bower_components/jquery/dist/jquery.min.js"></script>
-<!-- jQuery UI 1.11.4 -->
-<script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
-<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
-  $.widget.bridge('uibutton', $.ui.button);
-</script>
+<script src="../../bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
-<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<!-- Morris.js charts -->
-<script src="bower_components/raphael/raphael.min.js"></script>
-<script src="bower_components/morris.js/morris.min.js"></script>
-<!-- Sparkline -->
-<script src="bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
-<!-- jvectormap -->
-<script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
-<!-- jQuery Knob Chart -->
-<script src="bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
-<!-- daterangepicker -->
-<script src="bower_components/moment/min/moment.min.js"></script>
-<script src="bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
-<!-- datepicker -->
-<script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-<!-- Bootstrap WYSIHTML5 -->
-<script src="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- Slimscroll -->
-<script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<script src="../../bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
-<script src="bower_components/fastclick/lib/fastclick.js"></script>
+<script src="../../bower_components/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
-<script src="dist/js/adminlte.min.js"></script>
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-<script src="dist/js/pages/dashboard.js"></script>
+<script src="../../dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="dist/js/demo.js"></script>
+<script src="../../dist/js/demo.js"></script>
 </body>
 </html>

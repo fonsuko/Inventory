@@ -25,6 +25,7 @@
 			$_SESSION["firstname"] = $objResult["firstname"];
 			$_SESSION["lastname"] = $objResult["lastname"];
 			$_SESSION["type"] = $objResult["type"];
+			$_SESSION["tmpcart"] = array();
 
 			session_write_close();
 

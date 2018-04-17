@@ -21,6 +21,7 @@
         $isactive8b = "";
         $isactive9 = "";
         $isactive10 = "";
+        $isactive10a = "";
         $isactive11 = "";
 
         switch($active){
@@ -53,6 +54,11 @@
                 break;
             case "status": $isactive9 = "active"; break;
             case "list": $isactive10 = "active"; break;
+                $isactive10 = "active";
+                switch($sub){
+                  case "a": $isactive10a = "active"; break;
+                }
+                break;
             case "stock": $isactive11 = "active"; break;
         }
 
@@ -283,8 +289,8 @@
                       </span>
                     </a>
                     <ul class="treeview-menu">
-                      <li><a href="/Inventory/pages/tables/order_list.php"><i class="fa fa-circle-o"></i> Order List details </a></li>
-                      <li><a href="#"><i class="fa fa-circle-o"></i> Manage Order List</a></li>
+                      <li><a href="/Inventory/pages/tables/order_list_staff.php"><i class="fa fa-circle-o"></i> Order List</a></li>
+
 
                     </ul>
                   </li>

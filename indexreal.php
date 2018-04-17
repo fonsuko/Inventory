@@ -1,5 +1,5 @@
-<?php 
-  session_start(); 
+<?php
+  session_start();
   include('./template/top_menu.php');
   include('./template/left_menu.php');
 
@@ -145,6 +145,7 @@
         <!-- ./col -->
       </div>
       <!-- /.row -->
+
       <!-- Main row -->
       <div class="row">
         <!-- Left col -->
